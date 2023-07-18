@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tb">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar4"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:background="@color/tc"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/histtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/tb"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+                app:layout_constraintStart_toStartOf="@+id/toolbar4"
+                app:layout_constraintTop_toTopOf="@+id/toolbar4" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar4">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="25dp">
+
+                    <ImageView
+                        android:id="@+id/histparkpic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/carparkdeneme" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/histdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="Date"
+                        android:textColor="@color/tc"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/histadress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="Adress"
+                        android:textColor="@color/tc"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/histnote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:text="Note"
+                        android:textColor="@color/tc"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/histgomap"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:srcCompat="@drawable/gotomap" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/histfav"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+                app:layout_constraintTop_toTopOf="@+id/toolbar4"
+                app:srcCompat="@drawable/emptyheart" />
+
+            <ImageView
+                android:id="@+id/histtrash"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+                app:layout_constraintStart_toStartOf="@+id/toolbar4"
+                app:layout_constraintTop_toTopOf="@+id/toolbar4"
+                app:srcCompat="@drawable/trashh" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

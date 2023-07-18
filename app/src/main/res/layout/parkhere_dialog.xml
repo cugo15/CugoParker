@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bg">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="290dp"
+                android:layout_height="25dp"
+                android:background="@color/tb"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ParkHere"
+                android:textColor="@color/tc"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+                app:layout_constraintStart_toStartOf="@+id/toolbar2"
+                app:layout_constraintTop_toTopOf="@+id/toolbar2"
+                tools:ignore="TextContrastCheck" />
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:src="@drawable/close"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+            <Button
+                android:id="@+id/parkherebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/buttonshape"
+                android:text="Park Here"
+                android:textAlignment="textStart"
+                android:textColor="@color/tc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:id="@+id/takepic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/picofpark" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/entertitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Enter Title"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textColor="@color/tc"
+                        android:textColorHint="@color/tc"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/enternote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Enter Note :"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/tc"
+                        android:textColorHint="@color/tc"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
